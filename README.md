@@ -1,5 +1,7 @@
 # 📦 Laravel UserAccess
 
+
+
 A Laravel package to manage **Roles & Permissions** using Models, Enums, and Facade support.  
 Easily integrate role-based access control into your application.
 
@@ -41,6 +43,22 @@ This will:
 - Publish **models**
 - Publish **enums**
 - Run database migrations
+
+---
+
+## 📸 Screenshots
+
+### Installation
+![Installation](screenshots/install.png)
+
+### Permission Management
+![Permissions](screenshots/all.png)
+
+### When run rollback
+![Permission Rollback](screenshots/insert_and_rollback_run.png)
+
+### Permission Management 
+![Permission](screenshots/after_rolling_back.png)
 
 ---
 
