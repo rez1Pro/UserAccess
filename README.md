@@ -31,6 +31,7 @@ For a one-shot setup:
 
 ```bash
 php artisan user-access:install --force
+php artisan migrate // to migrate related tables
 ```
 
 This will:
@@ -93,6 +94,33 @@ Usage:
 ExamplePermissionEnum::VIEW_EXAMPLE->value; // "view:example"
 ```
 
+Commands:
+
+```php
+php artisan permission:create // to create new permission enums
+php artisan permission:insert // to insert all the permissions to the database
+```
+
+Rollback Commands:
+```php
+php artisan permission:rollback // select and remove permissions from database
+```
+After Run that command you will like this:
+```php
+namespace App\Enums\Permissions;
+
+use Rez1pro\UserAccess\Traits\HasAccess;
+
+enum ExamplePermissionEnum: string
+{
+    use HasAccess;
+
+    // Example permission cases
+    // case VIEW_EXAMPLE = 'view:example'; // commented by UserAccess package
+    case CREATE_EXAMPLE = 'create:example';
+}
+```
+
 ---
 
 ## 🎭 Facade
@@ -141,16 +169,6 @@ $permissionWithGroups = UserAccess::withGroup(); // Returns:
     // $permission = Permission::first();
 
     // return $permission->roles; // get all roles associated with this permission
-```
-
----
-
-## 🧪 Testing
-
-Publish migrations and run:
-
-```bash
-php artisan migrate // make sure user_access migration exists
 ```
 
 ---
