@@ -1,0 +1,14 @@
+<?php
+
+namespace App\Enums\Permissions;
+
+use Rez1pro\UserAccess\Traits\HasAccess;
+
+enum ExamplePermissionEnum: string
+{
+    use HasAccess;
+
+    // Example permission cases
+    case VIEW_EXAMPLE = 'view:example';
+    case CREATE_EXAMPLE = 'create:example';
+}

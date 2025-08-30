@@ -1,0 +1,27 @@
+{
+    "name": "rez1pro/user-access",
+    "version": "1.x-dev",
+    "description": "This is for managing role and permissions",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Rez1pro\\UserAccess\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Rez1pro\\UserAccess\\UserAccessServiceProvider"
+            ]
+        }
+    },
+    "authors": [
+        {
+            "name": "Rezwan Hossain Sajib",
+            "email": "rezwanhossainsajib@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
