@@ -125,8 +125,22 @@ $permissionWithGroups = UserAccess::withGroup(); // Returns:
     }
 ]
 
-// Check if has a permission
-$hasPermission = UserAccess::has(ExamplePermissionEnum::CREATE_USER);
+   //  $hasPermission = UserAccess::has(ExamplePermissionEnum::CREATE_USER); // true or false
+
+    // $role = Role::create(['name' => 'admin']);  // create new role
+
+    $role = Role::first();
+    // return $role->givePermissionTo(ExamplePermissionEnum::VIEW_EXAMPLE); // attach permission to role
+
+    // return $role->permissions; // Role based permission
+
+    // return dd($role->hasPermissionTo(ExamplePermissionEnum::VIEW_EXAMPLE)); // param can be enum, string or id eg (1, 'view_example', ExamplePermissionEnum::VIEW_EXAMPLE)
+
+    // return $role->removePermission(ExamplePermissionEnum::VIEW_EXAMPLE); // detach permission from role
+
+    // $permission = Permission::first();
+
+    // return $permission->roles; // get all roles associated with this permission
 ```
 
 ---
