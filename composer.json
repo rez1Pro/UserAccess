@@ -1,7 +1,16 @@
 {
     "name": "rez1pro/user-access",
     "version": "1.x-dev",
-    "description": "This is for managing role and permissions",
+    "description": "Laravel UserAccess package for roles & permissions using models, enums, and facades.",
+    "tags": [
+        "laravel",
+        "roles",
+        "permissions",
+        "access control",
+        "user access",
+        "enum",
+        "facade"
+    ],
     "type": "library",
     "license": "MIT",
     "autoload": {
